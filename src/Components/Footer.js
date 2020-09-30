@@ -3,7 +3,6 @@ import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import SvgIcon from '@material-ui/core/SvgIcon';
-
 import Grid from "@material-ui/core/grid";
 import Iyzico from "../Svg/iyzico.svg";
 import Facebook from "../Svg/Social/facebook.svg";
@@ -11,6 +10,9 @@ import Insta from "../Svg/Social/instagram.svg";
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Kargo from "../Img/kargo.png";
+import { ReactComponent as EmailIcon } from "../Svg/email.svg";
+import { ReactComponent as PhoneIcon } from "../Svg/phone.svg";
+
 import { ReactComponent as GooglePlay } from "../Svg/google-play.svg";
 import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
 
@@ -42,6 +44,11 @@ const useStyles = makeStyles((theme) =>
         },
         topcontainer: {
             marginTop: "1950px"
+        },
+        emailIcon: {
+            width: "12px",
+            verticalAlign: "bottom",
+            marginRight: "5px",
         }
     }),
 );
@@ -73,10 +80,10 @@ export default function Footer() {
                         </Grid>
                         <Grid item xs={3}>
                             <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}> İletişim</Typography></Grid>
-                            <Grid item xs={12}>+90 546 568 0707</Grid>
-                            <Grid item xs={12}>+90 542 622 2077</Grid>
-                            <Grid item xs={12}>+850 533 0633</Grid>
-                            <Grid item xs={12}> destek@farmaborsa.com</Grid>
+                            <Grid item xs={12}><PhoneIcon width="16px" className={classes.emailIcon} />+90 546 568 0707</Grid>
+                            <Grid item xs={12}><PhoneIcon width="16px" className={classes.emailIcon} />+90 542 622 2077</Grid>
+                            <Grid item xs={12}><PhoneIcon width="16px" className={classes.emailIcon} />+850 533 0633</Grid>
+                            <Grid item xs={12}> <EmailIcon width="16px" className={classes.emailIcon} /><span>destek@farmaborsa.com</span></Grid>
                         </Grid>
                     </Grid>
                     <Grid container item xs={5} >

@@ -15,6 +15,7 @@ import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
 import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
 import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
 import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
+import Maps from "../Components/Maps";
 
 import Stepper from "./Stepper";
 
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) =>
             top: 130
         },
         farmaborsaaciklama: {
-            marginTop: 600,
+            marginTop: 150,
             marginBottom: 100,
         },
         farmaborsatypography: {
