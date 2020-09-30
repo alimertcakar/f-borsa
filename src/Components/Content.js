@@ -15,9 +15,12 @@ import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
 import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
 import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
 import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
+import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
+
 import Maps from "../Components/Maps";
 
 import Stepper from "./Stepper";
+import { IconButton, SvgIcon } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) =>
@@ -84,6 +87,18 @@ const useStyles = makeStyles((theme) =>
         fiyatlardakolaytaramatypography: {
             fontWeight: 300,
             margin: "0 75px"
+        },
+        epostaButton: {
+            color: "white",
+            fontWeight: 700,
+            textTransform: "none",
+            padding: 20
+        },
+        link: {
+            textDecoration: "underline", background: "linear-gradient(0deg, rgba(34,193,195,1) 1%, rgba(34,254,255,1) 16%, rgba(255,31,31,0) 49%);",
+            color: "#0f0f0f",
+            fontWeight: 300,
+            fontSize: 20,
         }
     }),
 );
@@ -192,7 +207,7 @@ export default function Content() {
 
                         %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
                 </Grid>
-                <Grid container item xs={5} justify="center" >
+                <Grid container item xs={12} md={12} lg={5} justify="center" >
                     <Grid item style={{ height: 1 }}>
                         <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
@@ -210,6 +225,28 @@ export default function Content() {
                     </Grid>
                 </Grid>
 
+            </Grid>
+            <Grid container>
+                <Grid item xs={7}>
+                    <Maps />
+                </Grid>
+                <Grid container item xs={12} md={12} lg={5} justify="center">
+                    <Grid container item xs={12} justify="center">
+                        <a href="mailto:destek@farmaborsa.com" >
+                            <Typography component="span" className={classes.link}>
+                                Bize e-posta İle ulaşın
+                    </Typography>
+                            <IconButton><SendMail /></IconButton>
+                        </a>
+                    </Grid>
+                    <Grid container item xs={12} justify="center">
+                        <a href="https://api.whatsapp.com/send?phone=905465680707&text=FarmaBorsa%2c%20Eczac%C4%B1lara%20ait%20Pazaryeri&source=&data=&app_absent=">
+                            <Typography component="span" className={classes.link}>
+                                Whatsapp'dan mesaj bırakın
+                    </Typography>
+                        </a>
+                    </Grid>
+                </Grid>
             </Grid>
         </Container >
     )
