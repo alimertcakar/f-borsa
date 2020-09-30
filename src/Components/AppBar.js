@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) =>
         },
         menuButton: {
             marginRight: theme.spacing(2),
+            color: "white"
         },
         title: {
             flexGrow: 1,
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) =>
             borderRadius: "16.5px",
         },
         loginButton: {
+            color: "white",
             textTransform: "none",
             borderRadius: "16.5px",
             padding: "5px 15px",
@@ -67,7 +69,7 @@ export default function ButtonAppBar() {
                         <img src={FarmaBorsaLogo} alt="" height="24px" className={classes.farmaborsalogo}></img>
                     </div>
 
-                    <Button color="inherit" className={classes.loginButton}>Giriş Yap <img src={RightArrow} height="12px" className={classes.loginRightArrow} alt="Giriş Yap" /></Button>
+                    <Button className={classes.loginButton}>Giriş Yap <img src={RightArrow} height="12px" className={classes.loginRightArrow} alt="Giriş Yap" /></Button>
                 </Toolbar>
             </AppBar>
         </div >

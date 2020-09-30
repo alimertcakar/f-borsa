@@ -4,6 +4,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { CssBaseline } from "@material-ui/core"
 import "./Fonts/GreycliffCF-Regular.ttf";
+import "./Fonts/GreycliffCF-Bold.ttf";
+import { StylesProvider } from '@material-ui/core/styles';
+
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 
@@ -11,7 +14,10 @@ ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <App />
+      <StylesProvider injectFirst>
+        <App />
+      </StylesProvider>
+
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

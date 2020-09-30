@@ -17,6 +17,10 @@ import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
 
 const useStyles = makeStyles((theme) =>
     ({
+        formaborsacom: {
+            textDecoration: "underline", background: "linear-gradient(0deg, rgba(34,193,195,1) 1%, rgba(34,254,255,1) 16%, rgba(255,31,31,0) 49%);",
+
+        },
         upperContainer: { marginBottom: 20 },
         social: {
             margin: 5,
@@ -25,6 +29,16 @@ const useStyles = makeStyles((theme) =>
             color: "white",
             textTransform: "none",
             margin: "0 10px"
+        },
+        uygulamayıIndir: {
+            marginBottom: 10
+        },
+        footerhightext: {
+            marginBottom: 8
+        },
+        divider: {
+            marginTop: 50,
+            marginBottom: 25
         }
     }),
 );
@@ -40,7 +54,7 @@ export default function Footer() {
                 <Grid container className={classes.upperContainer}>
                     <Grid container item xs={7}>
                         <Grid container item xs={5}>
-                            <Grid item xs={12}>FormaBorsa</Grid>
+                            <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}>FormaBorsa</Typography></Grid>
                             <Grid item xs={12}>Neden FormaBorsa?</Grid>
                             <Grid item xs={12}>Üyelik Sözleşmesi</Grid>
                             <Grid item xs={12}>Kullanım Koşulları</Grid>
@@ -51,11 +65,11 @@ export default function Footer() {
                             <Grid item xs={12}>Güvenli Ödeme Sistemi</Grid>
                         </Grid>
                         <Grid item xs={4}>
-                            <Grid item xs={12}>Yardım</Grid>
+                            <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}>Yardım</Typography></Grid>
                             <Grid item xs={12}>Sıkça Sorulan Sorular</Grid>
                         </Grid>
                         <Grid item xs={3}>
-                            <Grid item xs={12}>Whatsapp & İletişim</Grid>
+                            <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}> İletişim</Typography></Grid>
                             <Grid item xs={12}>+90 546 568 0707</Grid>
                             <Grid item xs={12}>+90 542 622 2077</Grid>
                             <Grid item xs={12}>+850 533 0633</Grid>
@@ -63,12 +77,13 @@ export default function Footer() {
                     </Grid>
                     <Grid container item xs={5} >
                         <Grid item xs={12} justify="center" align="center">
+                            <Typography className={classes.uygulamayıIndir}>  Uygulamayı indir </Typography>
                             <Button variant="contained"
                                 color="secondary"
-                                size="large" startIcon={<SvgIcon><GooglePlay /></SvgIcon>} className={classes.downloadIcons}>Google Play indir</Button>
+                                size="large" startIcon={<SvgIcon><GooglePlay /></SvgIcon>} className={classes.downloadIcons}>Google Play</Button>
                             <Button variant="contained"
                                 color="secondary"
-                                size="large" startIcon={<SvgIcon><AppStore /></SvgIcon>} className={classes.downloadIcons}>AppStore indir</Button>
+                                size="large" startIcon={<SvgIcon><AppStore /></SvgIcon>} className={classes.downloadIcons}>AppStore</Button>
                         </Grid>
                         <Grid item xs={12}>
                             <img src={Kargo} aria-hidden="true" alt="" height="48px"></img>
@@ -76,12 +91,12 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </Container>
-            <Divider light />
+            <Divider light className={classes.divider} />
             <Container>
                 <Grid container>
                     <Grid item xs={4} style={{ marginTop: 5 }}>
                         <Typography component="p" variant="caption">
-                            © 2018-2020 farmaborsa.com® | Tüm hakları saklıdır
+                            © 2018-2020 <span className={classes.formaborsacom}>farmaborsa.com</span>® | Tüm hakları saklıdır
                         </Typography>
                     </Grid>
                     <Grid container item xs={4} justify="center" >
