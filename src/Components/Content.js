@@ -6,7 +6,14 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import FarmaBorsa1 from "../Img/farmaborsa1.png";
 import FarmaBorsa2 from "../Img/farmaborsa2.png";
+import Farmaekg from "../Img/farmaekg.jpeg";
+import Farmaekg2 from "../Img/farmaekg2.jpeg";
+import Farmaekg3 from "../Img/farmaekg3.jpeg";
+
 import Stepper from "./Stepper";
+import { ReactComponent as GooglePlay } from "../Svg/google-play.svg";
+import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 const useStyles = makeStyles((theme) =>
     ({
@@ -40,6 +47,17 @@ const useStyles = makeStyles((theme) =>
         farmaborsatypographyheader: {
             fontWeight: 700,
             marginBottom: 20
+        },
+        headerhighlight: {
+            color: theme.palette.primary.main
+        },
+        uygulamalar: {
+            marginTop: 200
+        },
+        downloadIcons: {
+            marginRight: 15,
+            marginTop: 20,
+            minWidth: 175
         }
     }),
 );
@@ -71,10 +89,24 @@ export default function Content() {
                 <Grid item xs={6}>
                     <img src={FarmaBorsa1} className={classes.formaborsaImg} alt="" aria-hidden="true"></img>
                 </Grid>
+                <Grid container item xs={12} className={classes.uygulamalar} justify="center">
+                    <Grid container item xs={12} justify="center">
+                        <Typography variant="h5" component="h2">Mobilden Anında Alış Satış ve Daha Fazlası</Typography>
+
+                    </Grid>
+                    <Grid container item xs={12} justify="center">
+                        <img src={FarmaBorsa2} alt="" aria-hidden="true" width="400px"></img>
+                        <img src={Farmaekg} alt="" aria-hidden="true" width="100px"></img>
+                        <img src={Farmaekg2} alt="" aria-hidden="true" width="100px"></img>
+                        <img src={Farmaekg3} alt="" aria-hidden="true" width="100px"></img>
+
+                    </Grid>
+
+                </Grid>
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={8}>
-                    <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa Nedir?</Typography>
+                    <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
                     <Typography className={classes.farmaborsatypography}>
 
                         FarmaBorsa sadece eczacıların üye olabildiği ve sadece eczacılara ait olan bir pazaryeridir.<br /><br />
@@ -97,7 +129,7 @@ export default function Content() {
                 </Grid>
                 <Grid container item xs={12} justify="center">
                     <Grid item>
-                        <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa Nasıl Çalışır?</Typography>
+                        <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
 
                     </Grid>
