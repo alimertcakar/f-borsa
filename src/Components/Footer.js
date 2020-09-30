@@ -47,12 +47,25 @@ const useStyles = makeStyles((theme) =>
             [theme.breakpoints.down("md")]: {
                 marginTop: "2750px",
 
-            }
+            },
+            [theme.breakpoints.down("md")]: {
+                marginTop: "2900px",
+
+            },
+            [theme.breakpoints.down("xs")]: {
+                marginTop: "3800px",
+
+            },
         },
         emailIcon: {
             width: "12px",
             verticalAlign: "bottom",
             marginRight: "5px",
+        },
+        kargoimg: {
+            [theme.breakpoints.down("xs")]: {
+                width: 375
+            }
         }
     }),
 );
@@ -101,7 +114,7 @@ export default function Footer() {
                                 size="large" startIcon={<SvgIcon><AppStore /></SvgIcon>} className={classes.downloadIcons}>AppStore</Button>
                         </Grid>
                         <Grid item xs={12} className={classes.kargo}>
-                            <img src={Kargo} aria-hidden="true" alt="" height="48px"></img>
+                            <img src={Kargo} className={classes.kargoimg} aria-hidden="true" alt="" height="48px"></img>
                         </Grid>
                     </Grid>
                 </Grid>

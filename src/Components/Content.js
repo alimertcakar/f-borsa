@@ -56,6 +56,13 @@ const useStyles = makeStyles((theme) =>
                 position: "static",
                 marginTop: 100,
                 marginLeft: "20vh"
+            },
+            [theme.breakpoints.down("sm")]: {
+                marginLeft: "4vw"
+            },
+            [theme.breakpoints.down("xs")]: {
+                width: "80%",
+                marginLeft: "5vw"
             }
         },
         farmaborsaaciklama: {
@@ -93,7 +100,10 @@ const useStyles = makeStyles((theme) =>
             marginTop: 200,
         },
         stickerlarPaper: {
-            padding: 30
+            padding: 30,
+            [theme.breakpoints.down("sm")]: {
+                padding: 10
+            }
         },
         farmaborsasticker: {
             display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"
@@ -173,7 +183,7 @@ export default function Content() {
                     <Button size="large" variant="contained" className={classes.uyeolbuttons}>Kurum Eczacısı Üye Ol</Button>
                 </Grid>
 
-                <Grid item xs={6} md={12} lg={6}>
+                <Grid item xs={12} md={12} lg={6}>
                     <img src={FarmaBorsa1} className={classes.formaborsaImg} alt="" aria-hidden="true"></img>
                 </Grid>
                 <Grid container item xs={12} className={classes.uygulamalar} justify="center">
@@ -253,7 +263,7 @@ export default function Content() {
 
                         %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
                 </Grid>
-                <Grid container item xs={5} md={12} lg={5} justify="center" >
+                <Grid container item xs={12} md={12} lg={5} justify="center" >
                     <Grid item style={{ height: 1 }}>
                         <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
