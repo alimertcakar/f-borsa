@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+
 import FarmaBorsa1 from "../Img/farmaborsa1.png";
 import FarmaBorsa2 from "../Img/farmaborsa2.png";
 import Farmaekg from "../Img/farmaekg.jpeg";
@@ -65,7 +67,7 @@ const useStyles = makeStyles((theme) =>
         },
         mobildenaninda: { marginBottom: 45 },
         stickerlar: {
-
+            marginTop: 100,
         }
     }),
 );
@@ -108,15 +110,24 @@ export default function Content() {
                         <img src={Farmaekg2} alt="" aria-hidden="true" width="100px"></img>
                         <img src={Farmaekg3} alt="" aria-hidden="true" width="100px"></img>
 
+
                     </Grid>
 
                 </Grid>
             </Grid>
             <Grid container className={classes.stickerlar}>
-                <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px"></img>
-                <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px"></img>
-                <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px"></img>
-                <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px"></img>
+                <Paper elevation={2}>
+                    <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px"></img>
+                </Paper>
+                <Paper>
+                    <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px"></img>
+                </Paper>
+                <Paper>
+                    <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px"></img>
+                </Paper>
+                <Paper>
+                    <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px"></img>
+                </Paper>
 
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
