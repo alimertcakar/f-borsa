@@ -1,8 +1,10 @@
 import React from 'react';
+import AppBar from "./Components/AppBar"
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <AppBar />
       F-borsa
     </div>
   );
