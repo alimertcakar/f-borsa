@@ -33,14 +33,21 @@ const useStyles = makeStyles((theme) =>
         },
         jumbotext: {
             fontWeight: "700",
-            color: "#2B3036"
+            color: "#2B3036",
+            [theme.breakpoints.down('md')]: {
+                display: "none"
+            }
         },
         uyeolbuttons: {
             background: "linear-gradient(90deg, rgba(81,172,245,1) 0%, rgba(63,63,251,1) 100%)",
             color: "white",
             textTransform: "none",
             marginTop: "35px",
-            marginLeft: "15px"
+            marginLeft: "15px",
+            [theme.breakpoints.down('md')]: {
+                display: "none"
+
+            }
         },
         formaborsaImg: {
             position: "absolute",
@@ -54,6 +61,12 @@ const useStyles = makeStyles((theme) =>
         farmaborsaaciklama: {
             marginTop: 150,
             marginBottom: 100,
+
+        },
+        farmaborsaaciklamaitem: {
+            [theme.breakpoints.down("md")]: {
+                marginLeft: "25vw",
+            }
         },
         farmaborsatypography: {
             lineHeight: "1.8",
@@ -112,6 +125,21 @@ const useStyles = makeStyles((theme) =>
             [theme.breakpoints.down('md')]: {
                 display: "none"
             },
+        },
+        eczacılaraozelmobil: {
+            display: "block",
+            textAlign: "center",
+            position: "relative",
+            top: 150,
+            [theme.breakpoints.up('lg')]: {
+                display: "none"
+            },
+        },
+        maps: {
+            [theme.breakpoints.down('md')]: {
+                marginTop: 100,
+                marginLeft: "16vw"
+            },
         }
     }),
 );
@@ -122,6 +150,11 @@ export default function Content() {
 
     return (
         <Container style={{ height: 620 }}>
+            <Grid container item xs={12} className={classes.eczacılaraozelmobil} justify="center">
+                <Typography variant="h5" component="h3" >
+                    Türkiyenin Eczacılara Özel Pazaryeri
+                </Typography>
+            </Grid>
             <Grid container className={classes.jumbotextcontainer}>
                 <Grid container item xs={12} justify="flex-start">
                     <Typography variant="h3" component="h3" className={classes.jumbotext}>
@@ -198,7 +231,7 @@ export default function Content() {
                 </Grid>
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
-                <Grid item xs={7}>
+                <Grid item xs={7} className={classes.farmaborsaaciklamaitem}>
                     <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
                     <Typography className={classes.farmaborsatypography}>
 
@@ -240,7 +273,7 @@ export default function Content() {
 
             </Grid>
             <Grid container>
-                <Grid item xs={7}>
+                <Grid item md={12} lg={7} className={classes.maps}>
                     <Maps />
                 </Grid>
                 <Grid container item xs={12} md={12} lg={5} justify="center">
