@@ -17,9 +17,9 @@ import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
 
 const useStyles = makeStyles((theme) =>
     ({
+        kargo: { marginTop: 45 },
         formaborsacom: {
             textDecoration: "underline", background: "linear-gradient(0deg, rgba(34,193,195,1) 1%, rgba(34,254,255,1) 16%, rgba(255,31,31,0) 49%);",
-
         },
         upperContainer: { marginBottom: 20 },
         social: {
@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) =>
         divider: {
             marginTop: 50,
             marginBottom: 25
+        },
+        topcontainer: {
+            marginTop: "1250px"
         }
     }),
 );
@@ -50,7 +53,7 @@ export default function Footer() {
 
     return (
         <>
-            <Container>
+            <Container className={classes.topcontainer}>
                 <Grid container className={classes.upperContainer}>
                     <Grid container item xs={7}>
                         <Grid container item xs={5}>
@@ -73,11 +76,12 @@ export default function Footer() {
                             <Grid item xs={12}>+90 546 568 0707</Grid>
                             <Grid item xs={12}>+90 542 622 2077</Grid>
                             <Grid item xs={12}>+850 533 0633</Grid>
+                            <Grid item xs={12}> destek@farmaborsa.com</Grid>
                         </Grid>
                     </Grid>
                     <Grid container item xs={5} >
                         <Grid item xs={12} justify="center" align="center">
-                            <Typography className={classes.uygulamayıIndir}>  Uygulamayı indir </Typography>
+                            <Typography variant="h6" className={classes.uygulamayıIndir}>  Uygulamayı indir </Typography>
                             <Button variant="contained"
                                 color="secondary"
                                 size="large" startIcon={<SvgIcon><GooglePlay /></SvgIcon>} className={classes.downloadIcons}>Google Play</Button>
@@ -85,7 +89,7 @@ export default function Footer() {
                                 color="secondary"
                                 size="large" startIcon={<SvgIcon><AppStore /></SvgIcon>} className={classes.downloadIcons}>AppStore</Button>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className={classes.kargo}>
                             <img src={Kargo} aria-hidden="true" alt="" height="48px"></img>
                         </Grid>
                     </Grid>
