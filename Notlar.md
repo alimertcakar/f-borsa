@@ -13,3 +13,7 @@ en alta whatsapp icon ekle
 
 
 hidden tarama componenti fixle
+
+
+
+fix 20vh

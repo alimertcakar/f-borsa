@@ -26,7 +26,10 @@ import { IconButton, SvgIcon } from '@material-ui/core';
 const useStyles = makeStyles((theme) =>
     ({
         jumbotextcontainer: {
-            marginTop: "120px"
+            marginTop: "120px",
+            [theme.breakpoints.down]: {
+                textAlign: "center"
+            }
         },
         jumbotext: {
             fontWeight: "700",
@@ -41,7 +44,12 @@ const useStyles = makeStyles((theme) =>
         },
         formaborsaImg: {
             position: "absolute",
-            top: 130
+            top: 130,
+            [theme.breakpoints.down("md")]: {
+                position: "static",
+                marginTop: 100,
+                marginLeft: "20vh"
+            }
         },
         farmaborsaaciklama: {
             marginTop: 150,
@@ -132,7 +140,7 @@ export default function Content() {
                     <Button size="large" variant="contained" className={classes.uyeolbuttons}>Kurum Eczacısı Üye Ol</Button>
                 </Grid>
 
-                <Grid item xs={6}>
+                <Grid item xs={6} md={12} lg={6}>
                     <img src={FarmaBorsa1} className={classes.formaborsaImg} alt="" aria-hidden="true"></img>
                 </Grid>
                 <Grid container item xs={12} className={classes.uygulamalar} justify="center">

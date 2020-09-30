@@ -43,7 +43,11 @@ const useStyles = makeStyles((theme) =>
             marginBottom: 25
         },
         topcontainer: {
-            marginTop: "2250px"
+            marginTop: "2250px",
+            [theme.breakpoints.down("md")]: {
+                marginTop: "2750px",
+
+            }
         },
         emailIcon: {
             width: "12px",
@@ -62,7 +66,7 @@ export default function Footer() {
         <>
             <Container className={classes.topcontainer}>
                 <Grid container className={classes.upperContainer}>
-                    <Grid container item xs={7}>
+                    <Grid container item md={12} lg={7}>
                         <Grid container item xs={5}>
                             <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}>FormaBorsa</Typography></Grid>
                             <Grid item xs={12}>Neden FormaBorsa?</Grid>
@@ -86,7 +90,7 @@ export default function Footer() {
                             <Grid item xs={12}> <EmailIcon width="16px" className={classes.emailIcon} /><span>destek@farmaborsa.com</span></Grid>
                         </Grid>
                     </Grid>
-                    <Grid container item xs={5} >
+                    <Grid container item md={12} lg={5} >
                         <Grid item xs={12} justify="center" align="center">
                             <Typography variant="h6" className={classes.uygulamayıIndir}>  Uygulamayı indir </Typography>
                             <Button variant="contained"
