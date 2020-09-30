@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) =>
             }
         },
         kEczacısıButton: {
-            marginLeft: 10
+            textTransform: "none",
         },
         farmaborsalogo: {
             verticalAlign: "bottom",
@@ -67,10 +67,7 @@ export default function ButtonAppBar() {
                         <img src={FarmaBorsaLogo} alt="" height="24px" className={classes.farmaborsalogo}></img>
                     </div>
 
-                    <Button color="inherit" className={classes.loginButton}>Giriş Yap <img src={RightArrow} height="12px" /></Button> |
-                    <Button color="inherit" className={classes.button}>Üye Ol</Button>
-                    <Button color="inherit" className={classes.button}>Kurum Eczacısı Üye Ol</Button>
-
+                    <Button color="inherit" className={classes.loginButton}>Giriş Yap <img src={RightArrow} height="12px" className={classes.loginRightArrow} alt="Giriş Yap" /></Button>
                 </Toolbar>
             </AppBar>
         </div >
