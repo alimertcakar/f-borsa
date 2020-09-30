@@ -67,8 +67,15 @@ const useStyles = makeStyles((theme) =>
         },
         mobildenaninda: { marginBottom: 45 },
         stickerlar: {
-            marginTop: 100,
+            marginTop: 200,
+        },
+        stickerlarPaper: {
+            padding: 30
+        },
+        farmaborsasticker: {
+            display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"
         }
+
     }),
 );
 
@@ -116,17 +123,29 @@ export default function Content() {
                 </Grid>
             </Grid>
             <Grid container className={classes.stickerlar}>
-                <Paper elevation={2}>
-                    <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px"></img>
+                <Paper elevation={2} className={classes.stickerlarPaper}>
+                    <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                    <Typography variant="caption">
+                        <br />Türkiye`nin Her Yerine<br /> Kargo Ücretsiz
+                    </Typography>
                 </Paper>
-                <Paper>
-                    <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px"></img>
+                <Paper className={classes.stickerlarPaper}>
+                    <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                    <Typography variant="caption">
+                        <br />50. Alışverisinişe Özel <br /> 50 Farma Lira Hediye
+                    </Typography>
                 </Paper>
-                <Paper>
-                    <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px"></img>
+                <Paper className={classes.stickerlarPaper}>
+                    <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                    <Typography variant="caption">
+                        <br />Mobil Uygulamamız <br /> AppStore & PlayStore’da
+                    </Typography>
                 </Paper>
-                <Paper>
-                    <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px"></img>
+                <Paper className={classes.stickerlarPaper}>
+                    <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                    <Typography variant="caption">
+                        <br />Farma Borsa’da <br /> İlan Eklemek Ücretsiz
+                    </Typography>
                 </Paper>
 
             </Grid>
