@@ -58,7 +58,8 @@ const useStyles = makeStyles((theme) =>
             marginRight: 15,
             marginTop: 20,
             minWidth: 175
-        }
+        },
+        mobildenaninda: { marginBottom: 45 },
     }),
 );
 
@@ -90,7 +91,7 @@ export default function Content() {
                     <img src={FarmaBorsa1} className={classes.formaborsaImg} alt="" aria-hidden="true"></img>
                 </Grid>
                 <Grid container item xs={12} className={classes.uygulamalar} justify="center">
-                    <Grid container item xs={12} justify="center">
+                    <Grid container item xs={12} justify="center" className={classes.mobildenaninda}>
                         <Typography variant="h5" component="h2">Mobilden Anında Alış Satış ve Daha Fazlası</Typography>
 
                     </Grid>
@@ -105,7 +106,7 @@ export default function Content() {
                 </Grid>
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
-                <Grid item xs={8}>
+                <Grid item xs={7}>
                     <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
                     <Typography className={classes.farmaborsatypography}>
 
@@ -127,16 +128,13 @@ export default function Content() {
 
                         %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
                 </Grid>
-                <Grid container item xs={12} justify="center">
+                <Grid container item xs={5} justify="center">
                     <Grid item>
                         <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
-
-                    </Grid>
-                    <Grid container item xs={12} justify="center">
                         <Stepper /><br /><br />
-                    </Grid>
 
+                    </Grid>
                 </Grid>
             </Grid>
         </Container >
