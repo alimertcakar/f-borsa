@@ -16,8 +16,8 @@ function Maps() {
     const phone = useMediaQuery('(max-width:375px)');
 
     let size = tablet ? "400px" : "640px";
-    size = bigPhone ? "350px" : size;
-    size = phone ? "300px" : size;
+    size = bigPhone ? "300px" : size;
+    size = phone ? "280px" : size;
 
     let height = phone ? "200px" : "480px";
     console.log(size)

@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) =>
                 marginTop: "3800px",
 
             },
+
         },
         emailIcon: {
             width: "12px",
@@ -63,8 +64,11 @@ const useStyles = makeStyles((theme) =>
             marginRight: "5px",
         },
         kargoimg: {
+            [theme.breakpoints.down("sm")]: {
+                width: 600
+            },
             [theme.breakpoints.down("xs")]: {
-                width: 375
+                width: 300
             }
         }
     }),
@@ -80,7 +84,7 @@ export default function Footer() {
             <Container className={classes.topcontainer}>
                 <Grid container className={classes.upperContainer}>
                     <Grid container item md={12} lg={7}>
-                        <Grid container item xs={5}>
+                        <Grid container item xs={6} sm={5}>
                             <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}>FormaBorsa</Typography></Grid>
                             <Grid item xs={12}>Neden FormaBorsa?</Grid>
                             <Grid item xs={12}>Üyelik Sözleşmesi</Grid>
@@ -91,11 +95,11 @@ export default function Footer() {
                             <Grid item xs={12}>İletişim</Grid>
                             <Grid item xs={12}>Güvenli Ödeme Sistemi</Grid>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={6} sm={4}>
                             <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}>Yardım</Typography></Grid>
                             <Grid item xs={12}>Sıkça Sorulan Sorular</Grid>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={12} sm={3}>
                             <Grid item xs={12}><Typography variant="h6" className={classes.footerhightext}> İletişim</Typography></Grid>
                             <Grid item xs={12}><PhoneIcon width="16px" className={classes.emailIcon} />+90 546 568 0707</Grid>
                             <Grid item xs={12}><PhoneIcon width="16px" className={classes.emailIcon} />+90 542 622 2077</Grid>

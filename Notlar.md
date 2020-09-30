@@ -17,3 +17,5 @@ hidden tarama componenti fixle
 
 
 fix 20vh
+
+party bird ekle goabstract :)
