@@ -25,6 +25,14 @@ export default function Footer() {
         <>
             <Container>
                 x
+                <Grid container>
+                    <Grid item xs={7}>
+                        sol
+                    </Grid>
+                    <Grid item xs={5}>
+                        sağ
+                    </Grid>
+                </Grid>
             </Container>
             <Divider light />
             <Container>
