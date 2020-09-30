@@ -2,6 +2,7 @@ import React from 'react'
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 import Grid from "@material-ui/core/grid";
 import Iyzico from "../Svg/iyzico.svg";
@@ -11,8 +12,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Kargo from "../Img/kargo.png";
 import { ReactComponent as GooglePlay } from "../Svg/google-play.svg";
+import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
 
-import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) =>
     ({
@@ -20,6 +21,11 @@ const useStyles = makeStyles((theme) =>
         social: {
             margin: 5,
         },
+        downloadIcons: {
+            color: "white",
+            textTransform: "none",
+            margin: "0 10px"
+        }
     }),
 );
 
@@ -55,13 +61,14 @@ export default function Footer() {
                             <Grid item xs={12}>+850 533 0633</Grid>
                         </Grid>
                     </Grid>
-                    <Grid container item xs={5}>
-                        <Grid item xs={12}>
-                            <img src={GooglePlay} aria-hidden="true" alt="" height="24px"></img>App Store
+                    <Grid container item xs={5} >
+                        <Grid item xs={12} justify="center" align="center">
                             <Button variant="contained"
-                                color="primary"
-                                size="large" startIcon={<GooglePlay />} >Google Play indir</Button>
-
+                                color="secondary"
+                                size="large" startIcon={<SvgIcon><GooglePlay /></SvgIcon>} className={classes.downloadIcons}>Google Play indir</Button>
+                            <Button variant="contained"
+                                color="secondary"
+                                size="large" startIcon={<SvgIcon><AppStore /></SvgIcon>} className={classes.downloadIcons}>AppStore indir</Button>
                         </Grid>
                         <Grid item xs={12}>
                             <img src={Kargo} aria-hidden="true" alt="" height="48px"></img>
