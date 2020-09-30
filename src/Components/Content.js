@@ -99,6 +99,11 @@ const useStyles = makeStyles((theme) =>
             color: "#0f0f0f",
             fontWeight: 300,
             fontSize: 20,
+        },
+        kolaytaramacontainer: {
+            [theme.breakpoints.down('md')]: {
+                display: "none"
+            },
         }
     }),
 );
@@ -148,7 +153,7 @@ export default function Content() {
             </Grid>
             <Grid container className={classes.stickerlar} justify="space-around"
             >
-                <Grid item>
+                <Grid item >
                     <Paper elevation={2} className={classes.stickerlarPaper}>
                         <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
                         <Typography variant="caption" className={classes.stickerlartext} component="div">
@@ -156,7 +161,7 @@ export default function Content() {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item>
+                <Grid item >
 
                     <Paper className={classes.stickerlarPaper}>
                         <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
@@ -165,7 +170,7 @@ export default function Content() {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item>
+                <Grid item >
 
                     <Paper className={classes.stickerlarPaper}>
                         <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
@@ -174,7 +179,7 @@ export default function Content() {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item>
+                <Grid item >
 
                     <Paper className={classes.stickerlarPaper}>
                         <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
@@ -207,7 +212,7 @@ export default function Content() {
 
                         %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
                 </Grid>
-                <Grid container item xs={12} md={12} lg={5} justify="center" >
+                <Grid container item xs={5} md={12} lg={5} justify="center" >
                     <Grid item style={{ height: 1 }}>
                         <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
@@ -215,7 +220,7 @@ export default function Content() {
                             <Stepper />
                         </Grid>
                     </Grid>
-                    <Grid container item justify="center">
+                    <Grid container item justify="center" md={1} lg={12} className={classes.kolaytaramacontainer}>
                         <Grid item>
                             <Typography variant="h6" className={classes.fiyatlardakolaytarama}> Fiyatlarda Kolay Tarama</Typography>
                             <Typography component="div" className={classes.fiyatlardakolaytaramatypography}>

@@ -9,3 +9,7 @@ Blob ekle, içine eczacılık ikonları ekle.
 
 
 en alta whatsapp icon ekle
+
+
+
+hidden tarama componenti fixle
