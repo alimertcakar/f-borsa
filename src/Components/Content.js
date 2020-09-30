@@ -9,6 +9,10 @@ import FarmaBorsa2 from "../Img/farmaborsa2.png";
 import Farmaekg from "../Img/farmaekg.jpeg";
 import Farmaekg2 from "../Img/farmaekg2.jpeg";
 import Farmaekg3 from "../Img/farmaekg3.jpeg";
+import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
+import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
+import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
+import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
 
 import Stepper from "./Stepper";
 import { ReactComponent as GooglePlay } from "../Svg/google-play.svg";
@@ -60,6 +64,9 @@ const useStyles = makeStyles((theme) =>
             minWidth: 175
         },
         mobildenaninda: { marginBottom: 45 },
+        stickerlar: {
+
+        }
     }),
 );
 
@@ -104,6 +111,13 @@ export default function Content() {
                     </Grid>
 
                 </Grid>
+            </Grid>
+            <Grid container className={classes.stickerlar}>
+                <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px"></img>
+                <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px"></img>
+                <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px"></img>
+                <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px"></img>
+
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={7}>
