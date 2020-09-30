@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) =>
             padding: 20
         },
         link: {
-            textDecoration: "underline", background: "linear-gradient(0deg, rgba(34,193,195,1) 1%, rgba(34,254,255,1) 16%, rgba(255,31,31,0) 49%);",
+            textDecoration: "underline",
             color: "#0f0f0f",
             fontWeight: 300,
             fontSize: 20,
