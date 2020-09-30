@@ -7,7 +7,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import FarmaBorsaLogo from "../Svg/logo.svg";
+import RightArrow from "../Svg/rightarrow.svg";
 
 const useStyles = makeStyles((theme) =>
     ({
@@ -27,9 +28,26 @@ const useStyles = makeStyles((theme) =>
 
         },
         button: {
-            textTransform: "none"
+            textTransform: "none",
+            borderRadius: "16.5px",
+        },
+        loginButton: {
+            textTransform: "none",
+            borderRadius: "16.5px",
+            padding: "5px 15px",
+            background: "hsla(0,0%,100%,0.2)",
+            "&:hover": {
+                background: "hsla(0,0%,100%,0.4)"
+            }
         },
         kEczacısıButton: {
+            marginLeft: 10
+        },
+        farmaborsalogo: {
+            verticalAlign: "bottom",
+            userSelect: "none"
+        },
+        loginRightArrow: {
             marginLeft: 10
         }
     }),
@@ -45,18 +63,16 @@ export default function ButtonAppBar() {
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                    <div className={classes.title}>
-                        <Typography variant="h6" >
-                            f-Borsa
-                        </Typography>
+                    <div className={classes.title} aria-hidden="true">
+                        <img src={FarmaBorsaLogo} alt="" height="24px" className={classes.farmaborsalogo}></img>
                     </div>
 
-                    <Button color="inherit" className={classes.button}>Giriş Yap</Button> |
+                    <Button color="inherit" className={classes.loginButton}>Giriş Yap <img src={RightArrow} height="12px" /></Button> |
                     <Button color="inherit" className={classes.button}>Üye Ol</Button>
                     <Button color="inherit" className={classes.button}>Kurum Eczacısı Üye Ol</Button>
 
                 </Toolbar>
             </AppBar>
-        </div>
+        </div >
     );
 }

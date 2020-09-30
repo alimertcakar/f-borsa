@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771.67 269.32">
+  <g fill="#fff">
+    <path d="M0 235.07h19.74V40.82h95.68s34.11 5.79 34.11 37.65c0 0 4.5 38.83-49.56 38.83H96v15.39s53.67 2.41 53.67 45.21-42.89 38.62-42.89 38.62H58.14v-57.77h34.11v-22.5h-53.1v98.82h80.13S173 226.81 173 178.54s-31.22-52.77-31.22-52.77S173 115.15 173 80.72s-19-59.21-58.57-59.21H0z"/>
+    <path d="M38.19 117.08V60.02h69.93V78.9h-50.2v19.73h30.79v18.45z"/>
+    <text font-family="Montserrat-Bold, Montserrat" font-size="143.94" font-weight="700" transform="translate(201.5 122.35)">
+      <tspan letter-spacing="-.03em">F</tspan><tspan x="87.8" y="0">ARMA</tspan>
+    </text>
+    <text font-family="Montserrat-SemiBold, Montserrat" font-size="129.23" font-weight="600" letter-spacing=".14em" transform="translate(201.5 235.07)">
+      BORSA
+    </text>
+  </g>
+</svg>
