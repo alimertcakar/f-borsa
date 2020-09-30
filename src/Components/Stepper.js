@@ -8,7 +8,7 @@ import TabList from '@material-ui/lab/TabList';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        maxWidth: "400px",
+        maxWidth: "300px",
         borderRadius: "3px"
     },
 }));

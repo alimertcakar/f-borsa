@@ -17,9 +17,7 @@ import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
 import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
 
 import Stepper from "./Stepper";
-import { ReactComponent as GooglePlay } from "../Svg/google-play.svg";
-import { ReactComponent as AppStore } from "../Svg/appstore2.svg";
-import SvgIcon from '@material-ui/core/SvgIcon';
+
 
 const useStyles = makeStyles((theme) =>
     ({
@@ -74,8 +72,18 @@ const useStyles = makeStyles((theme) =>
         },
         farmaborsasticker: {
             display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"
+        },
+        stickerlartext: {
+            textAlign: "center"
+        },
+        fiyatlardakolaytarama: {
+            fontWeight: 700,
+            textAlign: "center"
+        },
+        fiyatlardakolaytaramatypography: {
+            fontWeight: 300,
+            margin: "0 75px"
         }
-
     }),
 );
 
@@ -122,32 +130,43 @@ export default function Content() {
 
                 </Grid>
             </Grid>
-            <Grid container className={classes.stickerlar}>
-                <Paper elevation={2} className={classes.stickerlarPaper}>
-                    <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                    <Typography variant="caption">
-                        <br />Türkiye`nin Her Yerine<br /> Kargo Ücretsiz
-                    </Typography>
-                </Paper>
-                <Paper className={classes.stickerlarPaper}>
-                    <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                    <Typography variant="caption">
-                        <br />50. Alışverisinişe Özel <br /> 50 Farma Lira Hediye
-                    </Typography>
-                </Paper>
-                <Paper className={classes.stickerlarPaper}>
-                    <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                    <Typography variant="caption">
-                        <br />Mobil Uygulamamız <br /> AppStore & PlayStore’da
-                    </Typography>
-                </Paper>
-                <Paper className={classes.stickerlarPaper}>
-                    <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                    <Typography variant="caption">
-                        <br />Farma Borsa’da <br /> İlan Eklemek Ücretsiz
-                    </Typography>
-                </Paper>
+            <Grid container className={classes.stickerlar} justify="space-around"
+            >
+                <Grid item>
+                    <Paper elevation={2} className={classes.stickerlarPaper}>
+                        <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                        <Typography variant="caption" className={classes.stickerlartext} component="div">
+                            <br />Türkiye`nin Her Yerine<br /> <strong>Kargo Ücretsiz</strong>
+                        </Typography>
+                    </Paper>
+                </Grid>
+                <Grid item>
 
+                    <Paper className={classes.stickerlarPaper}>
+                        <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                            <br />50. Alışverisinişe Özel <br /> <strong>50 Farma Lira Hediye</strong>
+                        </Typography>
+                    </Paper>
+                </Grid>
+                <Grid item>
+
+                    <Paper className={classes.stickerlarPaper}>
+                        <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                            <br />Mobil Uygulamamız <br /> <strong>AppStore & PlayStore’da</strong>
+                        </Typography>
+                    </Paper>
+                </Grid>
+                <Grid item>
+
+                    <Paper className={classes.stickerlarPaper}>
+                        <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                            <br />Farma Borsa’da <br /> <strong>İlan Eklemek Ücretsiz</strong>
+                        </Typography>
+                    </Paper>
+                </Grid>
             </Grid>
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={7}>
@@ -172,14 +191,24 @@ export default function Content() {
 
                         %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
                 </Grid>
-                <Grid container item xs={5} justify="center">
-                    <Grid item>
+                <Grid container item xs={5} justify="center" >
+                    <Grid item style={{ height: 1 }}>
                         <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
-                        <Stepper /><br /><br />
-
+                        <Grid container justify="center">
+                            <Stepper />
+                        </Grid>
+                    </Grid>
+                    <Grid container item justify="center">
+                        <Grid item>
+                            <Typography variant="h6" className={classes.fiyatlardakolaytarama}> Fiyatlarda Kolay Tarama</Typography>
+                            <Typography component="div" className={classes.fiyatlardakolaytaramatypography}>
+                                Aradığınız ürünün tüm ilanlarına tek bir ekranda kolaylıkla ulaşabilirsiniz. Ürünün farklı miat ve fiyat avantajları, ücretsiz kargo avantajı ile hizmetinize sunuluyor.
+                        </Typography>
+                        </Grid>
                     </Grid>
                 </Grid>
+
             </Grid>
         </Container >
     )
