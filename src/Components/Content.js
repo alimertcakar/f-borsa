@@ -16,8 +16,8 @@ import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
 import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
 import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
 import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
-import { motion } from "framer-motion"
-
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 import Maps from "../Components/Maps";
 
 import Stepper from "./Stepper";
@@ -151,6 +151,9 @@ const useStyles = makeStyles((theme) =>
                 marginTop: 100,
                 marginLeft: "16vw"
             },
+        },
+        motionspan: {
+            display: "inline-block"
         }
     }),
 );
@@ -169,20 +172,39 @@ export default function Content() {
             </Grid>
             <Grid container className={classes.jumbotextcontainer}>
                 <Grid container item xs={12} justify="flex-start">
-                    <Typography variant="h3" component="h3" className={classes.jumbotext}>
-                        Türkiye'nin
+                    <motion.span animate={{ x: [-100, 0] }}>
+                        <Typography variant="h3" component="h3" className={classes.jumbotext}>
+                            Türkiye'nin
             </Typography>
+                    </motion.span>
                 </Grid>
                 <Grid container item xs={12} justify="flex-start">
-                    <Typography variant="h3" component="h1" className={classes.jumbotext}>  Eczacılara Özel</Typography>
+                    <motion.span animate={{ x: [-100, 0] }}>
+                        <Typography variant="h3" component="h1" className={classes.jumbotext}>  Eczacılara Özel</Typography>
+                    </motion.span>
                 </Grid>
                 <Grid container item xs={12} justify="flex-start">
-                    <Typography variant="h3" component="h1" className={classes.jumbotext}> Pazaryeri</Typography>
+                    <motion.span animate={{ x: [-100, 0] }}>
+                        <Typography variant="h3" component="h1" className={classes.jumbotext}> Pazaryeri</Typography>
+                    </motion.span>
                 </Grid>
                 <Grid item xs={6}>
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }} whileHover={{
+                        scale: 1.1,
+                        rotate: 10,
+                        transition: { duration: 1 },
+                    }}>
+                        <Button size="large" variant="contained" className={classes.uyeolbuttons}>Üye Ol</Button>
+                    </motion.span>
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }} whileHover={{
+                        scale: 1.1,
+                        rotate: 10,
+                        x: 20,
+                        transition: { duration: 1 },
+                    }}>
+                        <Button size="large" variant="contained" className={classes.uyeolbuttons}>Kurum Eczacısı Üye Ol</Button>
+                    </motion.span>
 
-                    <Button size="large" variant="contained" className={classes.uyeolbuttons}>Üye Ol</Button>
-                    <Button size="large" variant="contained" className={classes.uyeolbuttons}>Kurum Eczacısı Üye Ol</Button>
                 </Grid>
 
                 <Grid item xs={12} md={12} lg={6}>
@@ -223,7 +245,7 @@ export default function Content() {
                         <Paper className={classes.stickerlarPaper}>
                             <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
                             <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                                <br />50. Alışverisinişe Özel <br /> <strong>50 Farma Lira Hediye</strong>
+                                <br />50. Alışverişinize Özel <br /> <strong>50 Farma Lira Hediye</strong>
                             </Typography>
                         </Paper>
                     </motion.div>
@@ -252,7 +274,9 @@ export default function Content() {
             </Grid >
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={7} className={classes.farmaborsaaciklamaitem}>
-                    <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }}>
+                        <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
+                    </motion.span>
                     <Typography className={classes.farmaborsatypography}>
 
                         FarmaBorsa sadece eczacıların üye olabildiği ve sadece eczacılara ait olan bir pazaryeridir.<br /><br />
@@ -275,7 +299,9 @@ export default function Content() {
                 </Grid>
                 <Grid container item xs={12} md={12} lg={5} justify="center" >
                     <Grid item style={{ height: 1 }}>
-                        <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
+                        <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }}>
+                            <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
+                        </motion.span>
                         <Typography className={classes.farmaborsatypography}>                    </Typography>
                         <Grid container justify="center">
                             <Stepper />
