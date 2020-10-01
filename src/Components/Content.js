@@ -86,7 +86,8 @@ const useStyles = makeStyles((theme) =>
         },
         uygulamalar: {
             marginTop: 200,
-            marginBottom: 250
+            marginBottom: 150,
+            minHeight: 250
         },
         downloadIcons: {
             marginRight: 15,
