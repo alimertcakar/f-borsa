@@ -7,3 +7,5 @@ https://capsule.click/playback/1601475852368 -- Üst kısım bitti
 https://capsule.click/playback/1601480410455 -- Üst ve orta eklemeler
 
 https://capsule.click/playback/1601483529549 -- Maps Eklendi
+
+https://capsule.click/playback/1601526539158 -- responsive iyileştirmeler ve bazı animasyonlar

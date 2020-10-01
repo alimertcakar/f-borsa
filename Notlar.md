@@ -19,3 +19,7 @@ hidden tarama componenti fixle
 fix 20vh
 
 party bird ekle goabstract :)
+
+
+
+content.js'den stickerlar stylelarını sil
