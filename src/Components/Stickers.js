@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react'
 import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
 import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"

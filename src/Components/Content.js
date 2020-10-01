@@ -22,6 +22,7 @@ import Maps from "../Components/Maps";
 
 import Stepper from "./Stepper";
 import { IconButton, SvgIcon } from '@material-ui/core';
+import { Sticker1, Sticker2, Sticker3, Sticker4 } from "./Stickers";
 
 
 const useStyles = makeStyles((theme) =>
@@ -229,47 +230,16 @@ export default function Content() {
             <Grid container className={classes.stickerlar} justify="space-around"
             >
                 <Grid item >
-                    <motion.div animate={{ rotate: 360 }}
-                        transition={{ duration: 2 }}>
-                        <Paper elevation={2} className={classes.stickerlarPaper}>
-                            <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                            <Typography variant="caption" className={classes.stickerlartext} component="div">
-                                <br />Türkiye`nin Her Yerine<br /> <strong>Kargo Ücretsiz</strong>
-                            </Typography>
-                        </Paper>
-                    </motion.div>
+                    <Sticker1 />
                 </Grid>
                 <Grid item >
-                    <motion.div animate={{ rotate: 360 }}
-                        transition={{ duration: 2 }}>
-                        <Paper className={classes.stickerlarPaper}>
-                            <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                                <br />50. Alışverişinize Özel <br /> <strong>50 Farma Lira Hediye</strong>
-                            </Typography>
-                        </Paper>
-                    </motion.div>
+                    <Sticker2 />
                 </Grid>
                 <Grid item >
-                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
-                        <Paper className={classes.stickerlarPaper}>
-                            <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                                <br />Mobil Uygulamamız <br /> <strong>AppStore & PlayStore’da</strong>
-                            </Typography>
-                        </Paper>
-                    </motion.div>
-
+                    <Sticker3 />
                 </Grid>
                 <Grid item >
-                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
-                        <Paper className={classes.stickerlarPaper}>
-                            <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                                <br />Farma Borsa’da <br /> <strong>İlan Eklemek Ücretsiz</strong>
-                            </Typography>
-                        </Paper>
-                    </motion.div>
+                    <Sticker4 />
                 </Grid>
             </Grid >
             <Grid container className={classes.farmaborsaaciklama} >
