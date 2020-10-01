@@ -41,8 +41,8 @@ export function Sticker1() {
     return (
         <motion.div ref={ref} animate={controls}
             variants={{
-                visible: { rotate: 360 },
-                hidden: { rotate: 0, x: 300 }
+                visible: { rotate: 360, scale: 1 },
+                hidden: { rotate: 0, scale: 0 }
             }}
             transition={{ duration: 2 }}>
             <Paper elevation={2} className={classes.stickerlarPaper}>
@@ -66,8 +66,8 @@ export function Sticker2() {
     return (
         <motion.div ref={ref} animate={controls}
             variants={{
-                visible: { rotate: 360 },
-                hidden: { rotate: 0, x: 300 }
+                visible: { rotate: 360, scale: 1 },
+                hidden: { rotate: 0, scale: 0 }
             }}
             transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
@@ -91,8 +91,8 @@ export function Sticker3() {
     return (
         <motion.div ref={ref} animate={controls}
             variants={{
-                visible: { rotate: 360 },
-                hidden: { rotate: 0, x: 300 }
+                visible: { rotate: 360, scale: 1 },
+                hidden: { rotate: 0, scale: 0 }
             }}
             transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
@@ -117,7 +117,7 @@ export function Sticker4() {
         <motion.div ref={ref} animate={controls}
             variants={{
                 visible: { rotate: 360 },
-                hidden: { rotate: 0, x: 300 }
+                hidden: { rotate: 0, scale: 0 }
             }} transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
                 <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>

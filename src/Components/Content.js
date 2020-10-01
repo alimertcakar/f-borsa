@@ -14,7 +14,7 @@ import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import Maps from "../Components/Maps";
-
+import { Whatsapp, Eposta } from "./İletisim";
 import Stepper from "./Stepper";
 import { IconButton } from '@material-ui/core';
 import { Sticker1, Sticker2, Sticker3, Sticker4 } from "./Stickers";
@@ -153,33 +153,33 @@ export default function Content() {
                     Türkiyenin Eczacılara Özel Pazaryeri
                 </Typography>
             </Grid>
-            <Grid container className={classes.jumbotextcontainer}>
+            <Grid container className={classes.jumbotextcontainer} >
                 <Grid container item xs={12} justify="flex-start">
-                    <motion.span animate={{ x: [-100, 0] }}>
+                    <motion.span animate={{ x: [-100, 100] }} transition={{ delay: 1.5 }}>
                         <Typography variant="h3" component="h3" className={classes.jumbotext}>
                             Türkiye'nin
             </Typography>
                     </motion.span>
                 </Grid>
                 <Grid container item xs={12} justify="flex-start">
-                    <motion.span animate={{ x: [-100, 0] }}>
+                    <motion.span animate={{ x: [-100, 100] }} transition={{ delay: 1.5 }}>
                         <Typography variant="h3" component="h1" className={classes.jumbotext}>  Eczacılara Özel</Typography>
                     </motion.span>
                 </Grid>
                 <Grid container item xs={12} justify="flex-start">
-                    <motion.span animate={{ x: [-100, 0] }}>
+                    <motion.span animate={{ x: [-100, 100] }} transition={{ delay: 1.5 }}>
                         <Typography variant="h3" component="h1" className={classes.jumbotext}> Pazaryeri</Typography>
                     </motion.span>
                 </Grid>
                 <Grid item xs={6}>
-                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }} whileHover={{
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 100] }} transition={{ delay: 1 }} whileHover={{
                         scale: 1.1,
                         rotate: 10,
                         transition: { duration: 1 },
                     }}>
                         <Button size="large" variant="contained" className={classes.uyeolbuttons}>Üye Ol</Button>
                     </motion.span>
-                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }} whileHover={{
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 100] }} transition={{ delay: 1 }} whileHover={{
                         scale: 1.1,
                         rotate: 10,
                         x: 20,
@@ -203,8 +203,6 @@ export default function Content() {
                         <img src={Farmaekg} alt="" aria-hidden="true" width="100px"></img>
                         <img src={Farmaekg2} alt="" aria-hidden="true" width="100px"></img>
                         <img src={Farmaekg3} alt="" aria-hidden="true" width="100px"></img>
-
-
                     </Grid>
 
                 </Grid>
@@ -276,19 +274,10 @@ export default function Content() {
                 </Grid>
                 <Grid container item xs={12} md={12} lg={5} justify="center">
                     <Grid container item xs={12} justify="center">
-                        <motion.a animate={{ x: [-100, 0] }} transition={{ duration: 1.2 }} href="mailto:destek@farmaborsa.com" >
-                            <Typography component="span" className={classes.link}>
-                                Bize e-posta İle ulaşın
-                    </Typography>
-                            <IconButton><SendMail /></IconButton>
-                        </motion.a>
+                        <Eposta />
                     </Grid>
                     <Grid container item xs={12} justify="center">
-                        <motion.a animate={{ x: [-100, 0] }} transition={{ duration: 1.2 }} href="https://api.whatsapp.com/send?phone=905465680707&text=FarmaBorsa%2c%20Eczac%C4%B1lara%20ait%20Pazaryeri&source=&data=&app_absent=">
-                            <Typography component="span" className={classes.link}>
-                                Whatsapp'dan mesaj bırakın
-                    </Typography>
-                        </motion.a>
+                        <Whatsapp />
                     </Grid>
                 </Grid>
             </Grid>
