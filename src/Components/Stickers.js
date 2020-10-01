@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 const useStyles = makeStyles((theme) =>
     ({
         stickerlar: {
-            marginTop: 200,
+            marginTop: 0,
         },
         stickerlarPaper: {
             padding: 30,

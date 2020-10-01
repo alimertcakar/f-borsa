@@ -85,7 +85,8 @@ const useStyles = makeStyles((theme) =>
             color: theme.palette.primary.main
         },
         uygulamalar: {
-            marginTop: 200
+            marginTop: 200,
+            marginBottom: 250
         },
         downloadIcons: {
             marginRight: 15,
@@ -93,21 +94,6 @@ const useStyles = makeStyles((theme) =>
             minWidth: 175
         },
         mobildenaninda: { marginBottom: 45 },
-        stickerlar: {
-            marginTop: 200,
-        },
-        stickerlarPaper: {
-            padding: 30,
-            [theme.breakpoints.down("sm")]: {
-                padding: 10
-            }
-        },
-        farmaborsasticker: {
-            display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"
-        },
-        stickerlartext: {
-            textAlign: "center"
-        },
         fiyatlardakolaytarama: {
             fontWeight: 700,
             textAlign: "center"
