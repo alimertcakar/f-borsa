@@ -4,24 +4,19 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 
 import FarmaBorsa1 from "../Img/farmaborsa1.png";
 import FarmaBorsa2 from "../Img/farmaborsa2.png";
 import Farmaekg from "../Img/farmaekg.jpeg";
 import Farmaekg2 from "../Img/farmaekg2.jpeg";
 import Farmaekg3 from "../Img/farmaekg3.jpeg";
-import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
-import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
-import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
-import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
 import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import Maps from "../Components/Maps";
 
 import Stepper from "./Stepper";
-import { IconButton, SvgIcon } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
 import { Sticker1, Sticker2, Sticker3, Sticker4 } from "./Stickers";
 
 
