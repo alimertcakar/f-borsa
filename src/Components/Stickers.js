@@ -1,5 +1,5 @@
 import { makeStyles, Paper, Typography } from '@material-ui/core';
-import React from 'react'
+import React, { useEffect } from 'react'
 import FarmaBorsaSticker from "../Svg/FarmaBorsa-1.svg";
 import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
 import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
@@ -31,8 +31,19 @@ const useStyles = makeStyles((theme) =>
 
 export function Sticker1() {
     const classes = useStyles();
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
     return (
-        <motion.div animate={{ rotate: 360 }}
+        <motion.div ref={ref} animate={controls}
+            variants={{
+                visible: { rotate: 360 },
+                hidden: { rotate: 0, x: 300 }
+            }}
             transition={{ duration: 2 }}>
             <Paper elevation={2} className={classes.stickerlarPaper}>
                 <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
@@ -45,8 +56,19 @@ export function Sticker1() {
 }
 export function Sticker2() {
     const classes = useStyles();
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
     return (
-        <motion.div animate={{ rotate: 360 }}
+        <motion.div ref={ref} animate={controls}
+            variants={{
+                visible: { rotate: 360 },
+                hidden: { rotate: 0, x: 300 }
+            }}
             transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
                 <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
@@ -59,8 +81,20 @@ export function Sticker2() {
 }
 export function Sticker3() {
     const classes = useStyles();
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
     return (
-        <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
+        <motion.div ref={ref} animate={controls}
+            variants={{
+                visible: { rotate: 360 },
+                hidden: { rotate: 0, x: 300 }
+            }}
+            transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
                 <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
                 <Typography variant="caption" component="div" className={classes.stickerlartext}>
@@ -72,8 +106,19 @@ export function Sticker3() {
 }
 export function Sticker4() {
     const classes = useStyles();
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
     return (
-        <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
+        <motion.div ref={ref} animate={controls}
+            variants={{
+                visible: { rotate: 360 },
+                hidden: { rotate: 0, x: 300 }
+            }} transition={{ duration: 2 }}>
             <Paper className={classes.stickerlarPaper}>
                 <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
                 <Typography variant="caption" component="div" className={classes.stickerlartext}>
