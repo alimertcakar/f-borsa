@@ -16,6 +16,7 @@ import FarmaBorsaSticker2 from "../Svg/FarmaBorsa-2.svg"
 import FarmaBorsaSticker3 from "../Svg/FarmaBorsa-3.svg"
 import FarmaBorsaSticker4 from "../Svg/FarmaBorsa-4.svg"
 import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
+import { motion } from "framer-motion"
 
 import Maps from "../Components/Maps";
 
@@ -158,6 +159,7 @@ const useStyles = makeStyles((theme) =>
 export default function Content() {
     const classes = useStyles();
 
+
     return (
         <Container style={{ height: 620 }}>
             <Grid container item xs={12} className={classes.eczacılaraozelmobil} justify="center">
@@ -205,41 +207,49 @@ export default function Content() {
             <Grid container className={classes.stickerlar} justify="space-around"
             >
                 <Grid item >
-                    <Paper elevation={2} className={classes.stickerlarPaper}>
-                        <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                        <Typography variant="caption" className={classes.stickerlartext} component="div">
-                            <br />Türkiye`nin Her Yerine<br /> <strong>Kargo Ücretsiz</strong>
-                        </Typography>
-                    </Paper>
+                    <motion.div animate={{ rotate: 360 }}
+                        transition={{ duration: 2 }}>
+                        <Paper elevation={2} className={classes.stickerlarPaper}>
+                            <img src={FarmaBorsaSticker} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                            <Typography variant="caption" className={classes.stickerlartext} component="div">
+                                <br />Türkiye`nin Her Yerine<br /> <strong>Kargo Ücretsiz</strong>
+                            </Typography>
+                        </Paper>
+                    </motion.div>
                 </Grid>
                 <Grid item >
-
-                    <Paper className={classes.stickerlarPaper}>
-                        <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                            <br />50. Alışverisinişe Özel <br /> <strong>50 Farma Lira Hediye</strong>
-                        </Typography>
-                    </Paper>
+                    <motion.div animate={{ rotate: 360 }}
+                        transition={{ duration: 2 }}>
+                        <Paper className={classes.stickerlarPaper}>
+                            <img src={FarmaBorsaSticker2} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                                <br />50. Alışverisinişe Özel <br /> <strong>50 Farma Lira Hediye</strong>
+                            </Typography>
+                        </Paper>
+                    </motion.div>
                 </Grid>
                 <Grid item >
+                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
+                        <Paper className={classes.stickerlarPaper}>
+                            <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                                <br />Mobil Uygulamamız <br /> <strong>AppStore & PlayStore’da</strong>
+                            </Typography>
+                        </Paper>
+                    </motion.div>
 
-                    <Paper className={classes.stickerlarPaper}>
-                        <img src={FarmaBorsaSticker3} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                            <br />Mobil Uygulamamız <br /> <strong>AppStore & PlayStore’da</strong>
-                        </Typography>
-                    </Paper>
                 </Grid>
                 <Grid item >
-
-                    <Paper className={classes.stickerlarPaper}>
-                        <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
-                        <Typography variant="caption" component="div" className={classes.stickerlartext}>
-                            <br />Farma Borsa’da <br /> <strong>İlan Eklemek Ücretsiz</strong>
-                        </Typography>
-                    </Paper>
+                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}>
+                        <Paper className={classes.stickerlarPaper}>
+                            <img src={FarmaBorsaSticker4} alt="" aria-hidden="true" width="67px" className={classes.farmaborsasticker}></img>
+                            <Typography variant="caption" component="div" className={classes.stickerlartext}>
+                                <br />Farma Borsa’da <br /> <strong>İlan Eklemek Ücretsiz</strong>
+                            </Typography>
+                        </Paper>
+                    </motion.div>
                 </Grid>
-            </Grid>
+            </Grid >
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={7} className={classes.farmaborsaaciklamaitem}>
                     <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
@@ -288,19 +298,19 @@ export default function Content() {
                 </Grid>
                 <Grid container item xs={12} md={12} lg={5} justify="center">
                     <Grid container item xs={12} justify="center">
-                        <a href="mailto:destek@farmaborsa.com" >
+                        <motion.a animate={{ x: [-100, 0] }} transition={{ duration: 1.2 }} href="mailto:destek@farmaborsa.com" >
                             <Typography component="span" className={classes.link}>
                                 Bize e-posta İle ulaşın
                     </Typography>
                             <IconButton><SendMail /></IconButton>
-                        </a>
+                        </motion.a>
                     </Grid>
                     <Grid container item xs={12} justify="center">
-                        <a href="https://api.whatsapp.com/send?phone=905465680707&text=FarmaBorsa%2c%20Eczac%C4%B1lara%20ait%20Pazaryeri&source=&data=&app_absent=">
+                        <motion.a animate={{ x: [-100, 0] }} transition={{ duration: 1.2 }} href="https://api.whatsapp.com/send?phone=905465680707&text=FarmaBorsa%2c%20Eczac%C4%B1lara%20ait%20Pazaryeri&source=&data=&app_absent=">
                             <Typography component="span" className={classes.link}>
                                 Whatsapp'dan mesaj bırakın
                     </Typography>
-                        </a>
+                        </motion.a>
                     </Grid>
                 </Grid>
             </Grid>
