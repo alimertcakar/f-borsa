@@ -10,7 +10,6 @@ import FarmaBorsa2 from "../Img/farmaborsa2.png";
 import Farmaekg from "../Img/farmaekg.jpeg";
 import Farmaekg2 from "../Img/farmaekg2.jpeg";
 import Farmaekg3 from "../Img/farmaekg3.jpeg";
-import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import Maps from "../Components/Maps";
@@ -18,7 +17,8 @@ import { Whatsapp, Eposta } from "./İletisim";
 import Stepper from "./Stepper";
 import { IconButton } from '@material-ui/core';
 import { Sticker1, Sticker2, Sticker3, Sticker4 } from "./Stickers";
-
+import { Nedir, NasilCalisir } from "./Descriptions";
+import Blob from "./Blob";
 
 const useStyles = makeStyles((theme) =>
     ({
@@ -155,6 +155,7 @@ export default function Content() {
             </Grid>
             <Grid container className={classes.jumbotextcontainer} >
                 <Grid container item xs={12} justify="flex-start">
+                    <Blob />
                     <motion.span animate={{ x: [-100, 100] }} transition={{ delay: 1.5 }}>
                         <Typography variant="h3" component="h3" className={classes.jumbotext}>
                             Türkiye'nin
@@ -179,10 +180,10 @@ export default function Content() {
                     }}>
                         <Button size="large" variant="contained" className={classes.uyeolbuttons}>Üye Ol</Button>
                     </motion.span>
-                    <motion.span className={classes.motionspan} animate={{ x: [-100, 100] }} transition={{ delay: 1 }} whileHover={{
+                    <motion.span className={classes.motionspan} animate={{ x: [-100, 100] }} transition={{ delay: 0.5 }} whileHover={{
                         scale: 1.1,
                         rotate: 10,
-                        x: 20,
+                        x: 120,
                         transition: { duration: 1 },
                     }}>
                         <Button size="large" variant="contained" className={classes.uyeolbuttons}>Kurum Eczacısı Üye Ol</Button>
@@ -224,38 +225,11 @@ export default function Content() {
             </Grid >
             <Grid container className={classes.farmaborsaaciklama} >
                 <Grid item xs={7} className={classes.farmaborsaaciklamaitem}>
-                    <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }}>
-                        <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
-                    </motion.span>
-                    <Typography className={classes.farmaborsatypography}>
-
-                        FarmaBorsa sadece eczacıların üye olabildiği ve sadece eczacılara ait olan bir pazaryeridir.<br /><br />
-
-                        Yaklaşık 4 yıldır üzerinde çalıştığımız FarmaBorsa, hepimizin sırtındaki stok maliyetini azaltmak düşük baremde karlılığımızı arttırmak ve ucuza çeşit bulundurabilmek amacıyla hazırlanmıştır.<br />
-
-                        Eczacı olmayan kişilerin FarmaBorsa’ya üye olması mümkün değildir. Bu denetim yönetici eczacılar tarafından titizlikle sağlanmaktadır.<br /><br />
-
-                        Sisteme sadece eczanelerimize ait GLN numarası ile üye olunabilmektedir.<br /><br />
-
-                        Üye eczacılar, sistem içinde ilaç dışı ürün satın alabileceği gibi ilaç dışı ürün de satabilmektedir.<br /><br />
-
-                        FarmaBorsa’ya üyelik ve ürün ilan verme ücretsiz olup, üyelerden herhangi bir aidat da talep edilmemektedir.<br /><br />
-
-                        FarmaBorsa’da alışveriş yapabilmek için kredi kartı kullanımı zorunludur. Alıcı ve Satıcı meslektaşlarımız arasındaki para transferi, güvenli ödeme kanalı olan iyzico ve FarmaBorsa garantisi altındadır.<br /><br />
-
-                        Mart 2017 de FarmaBorsa markası altında, sosyal sorumluluk projesi olarak başladığımız ve meslektaşlarımız arasında takas imkanı sunan bir programdan, mesleğin gereksinimleri ve mevcut üye eczacıların talepleri doğrultusunda evrilen bir pazaryeri haline gelmiştir.<br />
-
-                        %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
+                    <Nedir />
                 </Grid>
                 <Grid container item xs={12} md={12} lg={5} justify="center" >
                     <Grid item style={{ height: 1 }}>
-                        <motion.span className={classes.motionspan} animate={{ x: [-100, 0] }}>
-                            <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
-                        </motion.span>
-                        <Typography className={classes.farmaborsatypography}>                    </Typography>
-                        <Grid container justify="center">
-                            <Stepper />
-                        </Grid>
+                        <NasilCalisir />
                     </Grid>
                     <Grid container item justify="center" md={1} lg={12} className={classes.kolaytaramacontainer}>
                         <Grid item>

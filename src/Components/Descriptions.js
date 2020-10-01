@@ -1,14 +1,31 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-import { makeStyles, Paper, Typography } from '@material-ui/core';
+import { makeStyles, Paper, Typography, Grid } from '@material-ui/core';
 import { ReactComponent as SendMail } from "../Svg/sendmail.svg";
-import { IconButton } from '@material-ui/core';
+import Stepper from "./Stepper";
+
 
 const useStyles = makeStyles((theme) =>
     ({
-        test: {
-
+        motionspan: {
+            display: "inline-block"
+        },
+        farmaborsatypographyheader: {
+            fontWeight: 700,
+            marginBottom: 20
+        },
+        headerhighlight: {
+            color: theme.palette.primary.main
+        },
+        farmaborsatypography: {
+            lineHeight: "1.8",
+            whitespace: "pre-line",
+            fontWeight: 300
+        },
+        farmaborsatypographyheader: {
+            fontWeight: 700,
+            marginBottom: 20
         },
     }),
 );
@@ -25,16 +42,30 @@ export function Nedir() {
         }
     }, [controls, inView]);
     return (
-        <motion.a ref={ref} variants={{
-            visible: { x: [-100, 0] },
-            hidden: { rotate: 0, x: 300 }
-        }} animate={controls} transition={{ duration: 1.2 }} href="mailto:destek@farmaborsa.com" >
-            <Typography component="span" className={classes.link}>
-                Bize e-posta İle ulaşın
-            </Typography>
-            <IconButton><SendMail /></IconButton>
-        </motion.a>
-    )
+        <>
+            <motion.span ref={ref} animate={controls} variants={{ hidden: { x: -100 }, visible: { x: [-100, 0] } }} className={classes.motionspan} >
+                <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nedir?</span></Typography>
+            </motion.span>
+            <Typography className={classes.farmaborsatypography}>
+
+                FarmaBorsa sadece eczacıların üye olabildiği ve sadece eczacılara ait olan bir pazaryeridir.<br /><br />
+
+        Yaklaşık 4 yıldır üzerinde çalıştığımız FarmaBorsa, hepimizin sırtındaki stok maliyetini azaltmak düşük baremde karlılığımızı arttırmak ve ucuza çeşit bulundurabilmek amacıyla hazırlanmıştır.<br />
+
+        Eczacı olmayan kişilerin FarmaBorsa’ya üye olması mümkün değildir. Bu denetim yönetici eczacılar tarafından titizlikle sağlanmaktadır.<br /><br />
+
+        Sisteme sadece eczanelerimize ait GLN numarası ile üye olunabilmektedir.<br /><br />
+
+        Üye eczacılar, sistem içinde ilaç dışı ürün satın alabileceği gibi ilaç dışı ürün de satabilmektedir.<br /><br />
+
+        FarmaBorsa’ya üyelik ve ürün ilan verme ücretsiz olup, üyelerden herhangi bir aidat da talep edilmemektedir.<br /><br />
+
+        FarmaBorsa’da alışveriş yapabilmek için kredi kartı kullanımı zorunludur. Alıcı ve Satıcı meslektaşlarımız arasındaki para transferi, güvenli ödeme kanalı olan iyzico ve FarmaBorsa garantisi altındadır.<br /><br />
+
+        Mart 2017 de FarmaBorsa markası altında, sosyal sorumluluk projesi olarak başladığımız ve meslektaşlarımız arasında takas imkanı sunan bir programdan, mesleğin gereksinimleri ve mevcut üye eczacıların talepleri doğrultusunda evrilen bir pazaryeri haline gelmiştir.<br />
+
+        %100 Eczacı Markası olmakla övündüğümüz FarmaBorsa, mesleğimize ve ihtiyaçlarımıza değer katmaya devam edecektir.<br /><br /></Typography>
+        </>)
 }
 export function NasilCalisir() {
     const classes = useStyles();
@@ -46,13 +77,14 @@ export function NasilCalisir() {
         }
     }, [controls, inView]);
     return (
-        <motion.a ref={ref} variants={{
-            visible: { x: [-100, 0] },
-            hidden: { rotate: 0, x: 300 }
-        }} animate={controls} transition={{ duration: 1.2 }} href="https://api.whatsapp.com/send?phone=905465680707&text=FarmaBorsa%2c%20Eczac%C4%B1lara%20ait%20Pazaryeri&source=&data=&app_absent=">
-            <Typography component="span" className={classes.link}>
-                Whatsapp'dan mesaj bırakın
-            </Typography>
-        </motion.a>
+        <>
+            <motion.span ref={ref} animate={controls} variants={{ hidden: { x: -100 }, visible: { x: [-100, 0] } }} className={classes.motionspan} >
+                <Typography variant="h4" component="h2" className={classes.farmaborsatypographyheader}>FarmaBorsa <span className={classes.headerhighlight}>Nasıl Çalışır?</span></Typography>
+            </motion.span>
+            <Typography className={classes.farmaborsatypography}>                    </Typography>
+            <Grid container justify="center">
+                <Stepper />
+            </Grid>
+        </>
     )
 }
